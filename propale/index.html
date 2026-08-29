@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Proposition de Collaboration Vidéo : Le Chou Angers</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  /* noir et blanc — la couleur est une ponctuation */
+  :root {
+    --accent:      #B5651D;
+    --accent-deep: #8A4A14;
+    --vert:        #2C4A33;
+    --black:       #14100D;
+    --cream:       #FFFFFF;
+    --mid:         #8A8178;
+    --rule:        rgba(20,16,13,0.14);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--black);
+    overflow-x: hidden;
+  }
+
+  /* ─── TYPOGRAPHY ─── */
+  .display {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    line-height: 0.95;
+    text-transform: uppercase;
+  }
+  .display-xl { font-size: clamp(63px, 9.7vw, 141px); }
+  .display-lg { font-size: clamp(32px, 4.4vw, 63px); }
+  .display-md { font-size: clamp(28px, 4.4vw, 63px); }
+
+  .label {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--vert);
+    font-family: 'DM Sans', sans-serif;
+  }
+  .body-copy {
+    font-size: 13.5px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: #444;
+  }
+  .body-copy-lg {
+    font-size: 15.5px;
+    font-weight: 300;
+    line-height: 1.72;
+    color: #333;
+  }
+
+  /* ─── NAV ─── */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 32px;
+    height: 52px;
+    overflow: visible;
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  .nav-right { display: flex; align-items: center; gap: 28px; }
+  .nav-link {
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.6);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-link:hover { color: #fff; }
+  .nav-dot {
+    width: 26px; height: 26px;
+    border: 1px solid rgba(255,255,255,0.14);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .nav-dot-inner { width: 8px; height: 8px; background: #fff; border-radius: 50%; }
+
+  section { padding-top: 72px; }
+  .hero { background: var(--black); color: #fff; padding-top: 0; margin-top: 52px; }
+
+  /* ─── UTILITY GRIDS ─── */
+  .g2 { display: grid; grid-template-columns: 1fr 1fr; }
+  .g3 { display: grid; grid-template-columns: repeat(3, 1fr); }
+
+  /* ─── OPPORTUNITY / STAT STRIP ─── */
+  .opp-stats { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .opp-stat-cell { padding: 32px 28px; border-right: 1px solid var(--vert); }
+  .opp-stat-cell:last-child { border-right: none; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 42px;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  /* ─── PHASE SECTIONS ─── */
+  .phase-section { border-bottom: 1px solid var(--rule); }
+  .phase-section.dark { background: var(--black); color: #fff; }
+  .phase-section.dark .rule-color { border-color: rgba(255,255,255,0.14) !important; }
+
+  .phase-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+  .phase-section.dark .phase-header { border-color: rgba(255,255,255,0.14); }
+
+  .phase-header-left {
+    padding: 40px 32px 32px;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .phase-section.dark .phase-header-left { border-color: rgba(255,255,255,0.14); }
+
+  .phase-num-ghost {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(106px, 15.8vw, 211px);
+    line-height: 0.85;
+    color: rgba(20,16,13,0.06);
+    margin-bottom: -8px;
+  }
+  .phase-section.dark .phase-num-ghost { color: rgba(255,255,255,0.06); }
+
+  .phase-header-right {
+    padding: 40px 32px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  .phase-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(46px, 6.6vw, 95px);
+    line-height: 0.92;
+    text-transform: uppercase;
+    color: var(--vert);
+  }
+  .phase-section.dark .phase-name { color: #fff; }
+  .accent { color: var(--accent); }
+  .white { color: #fff; }
+
+  /* ─── CONTEXT STRIP (bandeau opportunité, pleine largeur) ─── */
+  .phase-context {
+    display: grid;
+    grid-template-columns: 1fr;
+    border-bottom: 1px solid var(--rule);
+  }
+  .phase-section.dark .phase-context { border-color: rgba(255,255,255,0.14); }
+  .phase-ctx-right {
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Diptyque / bandeau photo (Vision-Résultat, CTA) */
+  .phase-ctx-pattern {
+    position: relative;
+    overflow: hidden;
+    min-height: 200px;
+  }
+
+  /* ─── FORMAT CARDS ─── */
+  .phase-formats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid var(--rule);
+    align-items: stretch;
+  }
+  .phase-section.dark .phase-formats { border-color: rgba(255,255,255,0.14); }
+  .format-card { padding: 26px 22px; border-right: 1px solid var(--rule); display: flex; flex-direction: column; }
+  .phase-section.dark .format-card { border-color: rgba(255,255,255,0.14); }
+  .format-card:last-child { border-right: none; }
+  .format-num {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 26px;
+    color: rgba(20,16,13,0.3);
+    margin-bottom: 8px;
+  }
+  .phase-section.dark .format-num { color: rgba(255,255,255,0.35); }
+  .format-title { font-size: 12.5px; font-weight: 600; margin-bottom: 10px; line-height: 1.35; color: var(--vert); }
+  .phase-section.dark .format-title { color: #fff; }
+  .format-desc { font-size: 11.5px; font-weight: 300; line-height: 1.65; color: #666; }
+  .phase-section.dark .format-desc { color: rgba(255,255,255,0.6); }
+  .format-tag {
+    display: inline-block;
+    font-size: 9.5px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid var(--accent);
+    color: inherit;
+    margin-top: 16px;
+    font-family: 'DM Sans', sans-serif;
+    width: fit-content;
+  }
+
+  /* ─── VISION STRIP ─── */
+  .phase-vision { display: grid; grid-template-columns: 1fr 2fr; }
+  .phase-vision-left {
+    padding: 32px;
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+  }
+  .phase-section.dark .phase-vision-left { border-color: rgba(255,255,255,0.14); }
+  .kpi-val {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 30px;
+    color: var(--accent);
+    line-height: 1;
+  }
+  .kpi-desc { font-size: 11px; font-weight: 300; color: #888; margin-top: 4px; }
+  .phase-section.dark .kpi-desc { color: rgba(255,255,255,0.6); }
+
+  .phase-vision-right {
+    padding: 32px 36px;
+    border-left: 3px solid var(--vert);
+    background: transparent;
+  }
+  .vision-label { font-size: 9.5px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--vert); margin-bottom: 14px; font-weight: 500; }
+  .phase-section.dark .vision-label { color: rgba(255,255,255,0.6); }
+  .vision-text { font-size: 13.5px; font-weight: 300; line-height: 1.8; color: #444; font-style: italic; }
+  .phase-section.dark .vision-text { color: rgba(255,255,255,0.55); }
+
+  /* ─── VISION 12 MOIS ─── */
+  .vision-section { background: var(--black); color: var(--cream); }
+  .vision-header { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .vision-title-cell { padding: 60px 32px; border-right: 1px solid rgba(255,255,255,0.12); }
+  .vision-intro-cell { padding: 60px 32px; display: flex; align-items: flex-end; }
+  .vision-pillars { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,0.12); }
+  .vision-pillar { padding: 32px 26px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .vision-pillar:nth-child(3n) { border-right: none; }
+  .vision-pillar:nth-child(4), .vision-pillar:nth-child(5), .vision-pillar:nth-child(6) { border-bottom: none; }
+  .pillar-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 38px; color: rgba(255,255,255,0.18); margin-bottom: 8px; }
+  .pillar-title { font-size: 13px; font-weight: 600; color: var(--cream); margin-bottom: 10px; }
+  .pillar-body { font-size: 12px; font-weight: 300; line-height: 1.65; color: rgba(255,255,255,0.7); }
+
+  .vision-impact-row { display: grid; grid-template-columns: repeat(5, 1fr); border-top: 1px solid rgba(255,255,255,0.12); }
+  .impact-cell { padding: 28px 20px; border-right: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; justify-content: center; }
+  .impact-cell:last-child { border-right: none; }
+  .impact-val { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 32px; color: var(--accent); line-height: 1; margin-bottom: 6px; }
+  .impact-desc { font-size: 10.5px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.45; }
+
+  /* ─── CTA ─── */
+  .cta-section { background: var(--black); color: #fff; min-height: 55vh; display: grid; grid-template-columns: 1fr 1fr; }
+  .cta-left { padding: 72px 32px; display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid rgba(255,255,255,0.14); }
+  .cta-right { overflow: hidden; position: relative; max-height: 260px; }
+  .cta-overlay { position: absolute; bottom: 40px; right: 36px; text-align: right; }
+  .arrow-circle {
+    width: 56px; height: 56px; border: 1px solid rgba(255,255,255,0.14); border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; margin-left: auto; margin-bottom: 12px;
+    font-size: 20px; color: rgba(255,255,255,0.6);
+  }
+  .cta-contact { font-size: 13px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.65; }
+
+  footer {
+    background: var(--black);
+    border-top: 1px solid rgba(255,255,255,0.12);
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  footer span { font-size: 10px; color: rgba(255,255,255,0.6); letter-spacing: 0.08em; }
+
+  /* ─── ADDITIONAL STYLES ─── */
+  .prose { font-size: 14px; font-weight: 300; line-height: 1.75; color: #444; max-width: 640px; }
+  .prose strong { font-weight: 600; color: var(--vert); }
+  .prose-dark { color: rgba(255,255,255,0.55); }
+  .prose-dark strong { color: #fff; }
+  .phase-section.dark .prose { color: rgba(255,255,255,0.82); }
+  .phase-section.dark .body-copy { color: rgba(255,255,255,0.82); }
+
+  .section-intro { display: grid; grid-template-columns: 1fr 1fr; border-bottom: 1px solid var(--rule); }
+  .section-intro.dark { border-color: rgba(255,255,255,0.14); }
+  .section-intro-left { padding: 52px 32px; border-right: 1px solid var(--rule); }
+  .section-intro.dark .section-intro-left { border-color: rgba(255,255,255,0.14); }
+  .section-intro-right { padding: 52px 32px; }
+
+  .bullet-list { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-top: 16px; }
+  .bullet-list li { font-size: 13px; font-weight: 300; color: #444; padding-left: 16px; position: relative; line-height: 1.55; }
+  .bullet-list li::before { content: '·'; position: absolute; left: 0; color: var(--vert); font-weight: 400; }
+  .bullet-list.dark li { color: rgba(255,255,255,0.55); }
+  .bullet-list.dark li::before { color: rgba(255,255,255,0.6); }
+
+  .calcul-box { border: 1px solid var(--accent); padding: 28px 32px; margin-top: 4px; }
+  .calcul-box .num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 42px; color: var(--accent); line-height: 1; margin-bottom: 8px; }
+  .calcul-box p { font-size: 12.5px; font-weight: 300; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+  .offre-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,0.12); }
+  .offre-card { padding: 40px 32px; border-right: 1px solid rgba(255,255,255,0.12); display: flex; flex-direction: column; }
+  .offre-card:last-child { border-right: none; }
+  .offre-card.featured { background: transparent; border-top: 3px solid rgba(255,255,255,0.4); position: relative; }
+  .offre-badge {
+    position: absolute; top: 0; left: 50%; transform: translateX(-50%) translateY(-50%);
+    background: var(--cream); padding: 4px 14px; font-size: 9px; font-weight: 600;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--black); white-space: nowrap;
+  }
+  .offre-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 17px; color: var(--cream); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+  .offre-tarif { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 26px; color: var(--cream); line-height: 1.1; letter-spacing: 0.02em; margin-bottom: 12px; }
+  .offre-obj { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.55; margin-bottom: 24px; border-left: 2px solid rgba(255,255,255,0.12); padding-left: 14px; }
+  .offre-btn { display: block; text-align: center; padding: 12px 20px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; text-decoration: none; margin-bottom: 28px; }
+  .offre-btn.outline { border: 1px solid rgba(255,255,255,0.4); color: var(--cream); }
+  .offre-btn.filled { background: var(--cream); color: var(--black); }
+  .offre-section-label { font-size: 9px; letter-spacing: 0.24em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 10px; font-weight: 500; }
+  .offre-items { list-style: none; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+  .offre-items li { font-size: 12px; font-weight: 300; color: rgba(255,255,255,0.7); padding-left: 14px; position: relative; line-height: 1.5; }
+  .offre-card.featured .offre-items li { color: rgba(255,255,255,0.7); }
+  .offre-items li::before { content: '·'; position: absolute; left: 0; color: rgba(255,255,255,0.4); }
+  .offre-logi { display: flex; flex-direction: column; gap: 8px; margin: 20px 0 28px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.12); }
+  .offre-logi-row { display: flex; justify-content: space-between; align-items: center; }
+  .offre-logi-row span:first-child { font-size: 11.5px; font-weight: 300; color: rgba(255,255,255,0.4); }
+  .offre-logi-row span:last-child { font-size: 11.5px; font-weight: 500; color: var(--cream); }
+  .offre-head { margin-bottom: 32px; min-height: 200px; }
+  .offre-num-item { display: flex; gap: 12px; align-items: flex-start; }
+  .offre-num-index { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 12px; color: var(--accent); line-height: 1.5; flex-shrink: 0; }
+  .offre-num-text { display: flex; flex-direction: column; gap: 2px; }
+  .offre-num-title { font-size: 12.5px; font-weight: 500; color: var(--cream); line-height: 1.4; }
+  .offre-num-detail { font-size: 11px; font-weight: 300; color: rgba(255,255,255,0.5); line-height: 1.4; }
+
+  .retro-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
+  .retro-table th {
+    font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase;
+    color: #888; padding: 12px 16px; text-align: left; border-bottom: 1px solid var(--rule);
+  }
+  .retro-table td { font-size: 13px; font-weight: 300; color: #555; padding: 14px 16px; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.5; }
+  .retro-table td:first-child { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 14px; color: var(--vert); white-space: nowrap; }
+  .retro-table td:nth-child(2) { font-weight: 500; color: #666; white-space: nowrap; }
+
+  .engage-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+  .engage-cell { padding: 32px 24px; border-right: 1px solid rgba(255,255,255,0.12); border-bottom: 1px solid rgba(255,255,255,0.12); }
+  .engage-cell:nth-child(4n) { border-right: none; }
+  .engage-num { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 28px; color: rgba(255,255,255,0.2); margin-bottom: 8px; }
+  .engage-title { font-size: 12px; font-weight: 600; color: var(--cream); margin-bottom: 8px; }
+  .engage-desc { font-size: 11.5px; font-weight: 300; color: rgba(255,255,255,0.7); line-height: 1.6; }
+
+  .ref-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); }
+  .ref-cell { padding: 32px 28px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+  .ref-cell:nth-child(3n) { border-right: none; }
+  .ref-name { font-family: 'Playfair Display', serif; font-weight: 900; font-size: 18px; color: var(--black); letter-spacing: 0.01em; margin-bottom: 6px; }
+  .ref-desc { font-size: 12px; font-weight: 300; color: #666; line-height: 1.55; }
+
+  /* ─── RESPONSIVE ─── */
+  @media (max-width: 900px) {
+    .g2, .g3, .section-intro, .phase-header, .phase-context,
+    .vision-header, .cta-section, .offre-grid, .ref-grid, .vision-pillars {
+      grid-template-columns: 1fr !important;
+    }
+    .phase-header-left, .section-intro-left, .cta-left,
+    .offre-card, .ref-cell, .vision-title-cell, .phase-ctx-right {
+      border-right: none !important;
+      border-bottom: 1px solid var(--rule);
+    }
+    [aria-hidden="true"] {
+      display: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ GLOBAL GRID OVERLAY ═══════ -->
+<div style="position:fixed; inset:0; z-index:1; pointer-events:none; display:grid; grid-template-columns:repeat(4,1fr); mix-blend-mode:multiply;">
+  <div style="border-right:1px solid rgba(20,16,13,0.08);"></div>
+  <div style="border-right:1px solid rgba(20,16,13,0.08);"></div>
+  <div style="border-right:1px solid rgba(20,16,13,0.08);"></div>
+  <div></div>
+</div>
+
+<!-- NAV -->
+<nav>
+  <img src="images/JMSTUDIO.png" alt="JMStudio" style="height:114px !important;width:auto;object-fit:contain;vertical-align:middle;">
+  <div class="nav-right">
+    <a href="#contexte" class="nav-link">Contexte</a>
+    <a href="#strategie" class="nav-link">Stratégie</a>
+    <a href="#phase1" class="nav-link">Formats</a>
+    <a href="#offres" class="nav-link">Offres</a>
+    <a href="#conditions" class="nav-link">Conditions</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div class="nav-dot"><div class="nav-dot-inner"></div></div>
+  </div>
+</nav>
+
+<!-- ═══════ HERO ═══════ -->
+<section class="hero" style="position:relative; min-height:auto;">
+  <div style="position:relative; overflow:hidden; height:400px; width:100%;">
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 35% 40%, #2C4A33 0%, #1B3021 55%, #0F1D14 100%);z-index:0;"></div>
+    <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 10% 90%, rgba(255,255,255,0.2) 0%, transparent 55%);z-index:1;pointer-events:none;"></div>
+    <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,transparent,transparent calc(25% - 1px),rgba(255,255,255,0.10) calc(25% - 1px),rgba(255,255,255,0.10) 25%);z-index:2;pointer-events:none;"></div>
+    <div style="position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-weight:900;font-size:210px;color:rgba(255,255,255,0.11);white-space:nowrap;line-height:1;z-index:3;">LE CHOU</div>
+    <div style="position:relative;z-index:4;height:100%;display:flex;flex-direction:column;justify-content:space-between;padding:32px 40px;">
+      <span style="font-size:9px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Préparé pour Le Chou · Présenté par JMStudio</span>
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(44px,6.4vw,86px);line-height:0.94;text-transform:uppercase;color:var(--cream);">PROPOSITION DE COLLABORATION VIDÉO</div>
+      <span style="font-size:9px;letter-spacing:0.24em;text-transform:uppercase;color:rgba(255,255,255,0.35);">JMStudio · Le Chou Angers · 4 septembre 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ VOTRE SITUATION AUJOURD'HUI ═══════ -->
+<section id="contexte" style="background:var(--cream);border-bottom:1px solid var(--rule);padding-top:0;padding-bottom:0;margin-bottom:0;">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);background-image:repeating-linear-gradient(90deg,transparent,transparent calc(25% - 1px),var(--rule) calc(25% - 1px),var(--rule) 25%);border-bottom:1px solid var(--rule);padding:0;">
+    <div style="grid-column:1 / 3;padding:44px 0 44px 32px;">
+      <div class="label" style="margin-bottom:16px;">La problématique</div>
+      <p class="prose" style="font-size:19px;line-height:1.55;">Comment faire connaître à Angers un lieu que la rue ne laisse pas deviner, à des gens qui ne vous suivent pas encore, et transformer cette visibilité en clients aux heures creuses comme en ventes à emporter&nbsp;?</p>
+    </div>
+    <div style="grid-column:3 / 5;padding:44px 0 44px 32px;">
+      <div class="label" style="margin-bottom:16px;">La réponse</div>
+      <div class="display" style="font-size:clamp(28px,3.6vw,38px);line-height:1.15;">FAIRE DÉCOUVRIR CE QUE LA RUE CACHE, À CEUX QUI NE LE CHERCHENT PAS ENCORE.</div>
+    </div>
+  </div>
+  <div class="section-intro">
+    <div class="section-intro-left">
+      <div class="label" style="margin-bottom:18px;">Votre contexte</div>
+      <div class="display display-lg">VOTRE<br>SITUATION<br>AUJOURD'HUI</div>
+    </div>
+    <div class="section-intro-right" style="display:flex;align-items:center;">
+      <div>
+        <p class="prose">Le Chou est connu pour ses pâtisseries, mais pas encore assez comme un lieu à part entière. Vous voulez être connues sur Angers, et qu'on vous recommande autant pour le fait maison que pour l'accueil.</p>
+        <ul class="bullet-list" style="margin-top:20px;">
+          <li><strong>01 — Un lieu que peu de gens connaissent.</strong> Un salon haussmannien avec une cour que peu d'Angevins ont vue. Vous voulez qu'on vienne pour le lieu autant que pour la carte.</li>
+          <li><strong>02 — Une audience à élargir.</strong> Vous voulez toucher des personnes que vous n'attirez pas encore : les hommes, et les 50-60 ans.</li>
+          <li><strong>03 — Des créneaux creux.</strong> Les midis en semaine et les après-midis d'été restent vides, quand les après-midis d'hiver sont pleins.</li>
+          <li><strong>04 — Des ventes à emporter à développer.</strong> Vous voulez vendre plus de boissons et de pâtisseries à emporter, en complément du service en salle.</li>
+        </ul>
+        <p class="prose" style="margin-top:20px;"><strong>L'échéance.</strong> 15&nbsp;000 abonnés et 20&nbsp;000 à 30&nbsp;000 vues par Reel d'ici mars 2027 — six mois à peine. Une audience se construit en amont de la saison qu'elle doit remplir.</p>
+      </div>
+    </div>
+  </div>
+  <div class="opp-stats" style="border-top:1px solid var(--rule);background:var(--cream);">
+    <div class="opp-stat-cell">
+      <div class="stat-num">7 683</div>
+      <div class="label" style="margin-bottom:10px;">Abonnés Instagram (compte certifié)</div>
+      <p style="font-size:12.5px;font-weight:300;color:#555;line-height:1.6;">Relevé du 26/08/2026 sur @le_chou_angers, 293 publications. La matière existe déjà, sans stratégie derrière.</p>
+    </div>
+    <div class="opp-stat-cell">
+      <div class="stat-num">6 366</div>
+      <div class="label" style="margin-bottom:10px;">Vues médianes par Reel</div>
+      <p style="font-size:12.5px;font-weight:300;color:#555;line-height:1.6;">Sur 40 Reels relevés : moyenne 8 066, de 295 à 47 700 vues. Un écart déjà là, jamais reproduit volontairement.</p>
+    </div>
+    <div class="opp-stat-cell">
+      <div class="stat-num">12 / 40</div>
+      <div class="label" style="margin-bottom:10px;">Reels dépassant déjà le nombre d'abonnés</div>
+      <p style="font-size:12.5px;font-weight:300;color:#555;line-height:1.6;">La portée existe : 12 Reels sur 40 dépassent les 7 683 abonnés. Sans format ni calendrier pour la reproduire.</p>
+    </div>
+    <div class="opp-stat-cell">
+      <div class="stat-num">0</div>
+      <div class="label" style="margin-bottom:10px;">Vidéaste professionnel sollicité</div>
+      <p style="font-size:12.5px;font-weight:300;color:#555;line-height:1.6;">Le Chou n'a jamais travaillé avec un vidéaste. Toute la production actuelle se fait en interne.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ LE PLAFOND DE VERRE ═══════ -->
+<section style="background:var(--black);color:#fff;border-bottom:1px solid #241d16;">
+  <div class="g2" style="border-bottom:1px solid rgba(255,255,255,0.14);">
+    <div style="padding:52px 32px;border-right:1px solid rgba(255,255,255,0.14);">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:18px;">Le diagnostic</div>
+      <div class="display display-lg white">SI RIEN<br>NE CHANGE</div>
+    </div>
+    <div style="padding:52px 32px;display:flex;align-items:center;">
+      <div>
+        <p class="prose prose-dark">Le Chou a déjà des pics à 47&nbsp;700, 18&nbsp;300, 13&nbsp;400, 13&nbsp;200, 12&nbsp;600 et 12&nbsp;500 vues. Ils existent — mais rien ne les explique : pas de format identifié, pas de calendrier, pas d'intention derrière. L'accident, pas encore l'habitude.</p>
+        <p class="prose prose-dark" style="margin-top:14px;">Au rythme d'un Reel toutes les deux semaines, mars 2027 laisse une douzaine de publications pour transformer ces pics en rendez-vous récurrent — pas six mois pour improviser, une douzaine d'occasions pour installer un format.</p>
+      </div>
+    </div>
+  </div>
+  <div class="g3" style="border-bottom:1px solid rgba(255,255,255,0.14);">
+    <div style="padding:40px 32px;border-right:1px solid rgba(255,255,255,0.14);">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">Base de calcul, à valider</div>
+      <div class="calcul-box" style="margin-top:0;">
+        <div class="num">×3,1 à 4,7</div>
+        <p>Médiane actuelle : 6&nbsp;366 vues. Objectif : 20&nbsp;000 à 30&nbsp;000 vues par Reel. Un cran au-dessus de leurs propres meilleurs posts (jusqu'à 47&nbsp;700 vues) — pas hors d'atteinte, pas acquis non plus.</p>
+      </div>
+    </div>
+    <div style="padding:40px 32px;border-right:1px solid rgba(255,255,255,0.14);">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">Pourquoi maintenant</div>
+      <ul class="bullet-list dark">
+        <li><strong style="color:rgba(255,255,255,0.7);">Les pics existent déjà, mais par accident.</strong> 47&nbsp;700, 18&nbsp;300, 13&nbsp;400 vues : la preuve que la portée est possible, sans qu'aucun format ne l'explique ni ne la reproduise.</li>
+        <li><strong style="color:rgba(255,255,255,0.7);">Le fait maison ne se voit pas.</strong> Vendre moins, vendre mieux : le geste qui le prouve n'est aujourd'hui filmé par personne.</li>
+        <li><strong style="color:rgba(255,255,255,0.7);">Les créneaux creux ne se remplissent pas tout seuls.</strong> Le midi en semaine et l'été demandent une audience construite à l'avance, pas pendant la saison.</li>
+      </ul>
+    </div>
+    <div style="padding:40px 32px;">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">Le cadrage</div>
+      <p style="font-size:14.5px;font-weight:300;color:rgba(255,255,255,0.6);line-height:1.7;font-style:italic;">"Le lieu, le produit et une audience qui répond — le « latte du moment » l'a montré cet été. Ce qui manque, c'est la régularité."</p>
+      <div style="margin-top:24px;border-top:1px solid rgba(255,255,255,0.14);padding-top:20px;">
+        <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:13px;color:#fff;letter-spacing:0.03em;margin-bottom:6px;">JMStudio</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.6);font-weight:300;">Production vidéo &amp; motion design, Nantes</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ VISION / RÉSULTAT ═══════ -->
+<section style="background:var(--cream);border-bottom:1px solid var(--rule);">
+  <div class="section-intro">
+    <div class="section-intro-left">
+      <div class="label" style="margin-bottom:18px;">D'ici mars 2027</div>
+      <div class="display display-lg">LA VISION<br>LE<br>RÉSULTAT</div>
+    </div>
+    <div class="section-intro-right" style="display:flex;align-items:center;">
+      <div>
+        <p class="prose">Vous repartez avec un <strong>capital vidéo structuré</strong> : pas juste « des vidéos », mais un système de contenus pensé pour tenir l'échéance que vous vous êtes fixée.</p>
+        <ul class="bullet-list" style="margin-top:20px;">
+          <li>Le Chou connu sur Angers, pas seulement pour ses pâtisseries</li>
+          <li>La cour intérieure et le salon haussmannien découverts par ceux qui ne les ont jamais vus</li>
+          <li>Une audience élargie vers les hommes et les 50-60 ans</li>
+          <li>Le midi en semaine et l'été montrés comme des créneaux à part entière</li>
+        </ul>
+        <p class="prose" style="margin-top:20px;">Ce scénario s'écrit sur votre calendrier : une audience se construit en amont de la saison qu'elle doit remplir. Ce n'est pas une promesse de chiffres, c'est une trajectoire vers mars 2027.</p>
+      </div>
+    </div>
+  </div>
+  <div class="g2" style="border-top:1px solid var(--rule);margin-bottom:-8px;">
+    <div style="overflow:hidden;min-height:260px;border-right:1px solid var(--rule);">
+      <img src="images/tea-time.jpg" alt="Tea time dressé en salle" style="width:100%;height:260px;object-fit:cover;object-position:center 45%;">
+    </div>
+    <div style="overflow:hidden;min-height:260px;">
+      <img src="images/salon.jpg" alt="Pâte à tartiner Le Chou en salle" style="width:100%;height:260px;object-fit:cover;object-position:center 60%;">
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ STRATÉGIE 6 PHASES ═══════ -->
+<section style="background:var(--black);color:#fff;border-bottom:1px solid rgba(255,255,255,0.12);margin-top:0;" id="strategie">
+  <div class="g2" style="border-bottom:1px solid rgba(255,255,255,0.14);">
+    <div style="padding:52px 32px;border-right:1px solid rgba(255,255,255,0.14);">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:18px;">Le principe</div>
+      <div class="display display-lg white">LA<br>STRATÉGIE<br>VIDÉO</div>
+    </div>
+    <div style="padding:52px 32px;display:flex;align-items:center;">
+      <p class="prose prose-dark">Un ensemble de contenus complémentaires, chacun avec un rôle précis — faire découvrir le lieu, montrer le fait maison, élargir l'audience — puis un film signature, des contenus courts, et un message tenu dans la durée. Le fait maison n'est pas un volet parmi d'autres : c'est le fil qui traverse les six.</p>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(6,1fr);">
+    <div style="padding:20px 12px;border-right:1px solid rgba(255,255,255,0.14);text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">01</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">Le Lieu</div>
+    </div>
+    <div style="padding:20px 12px;border-right:1px solid rgba(255,255,255,0.14);text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">02</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">Fait Maison</div>
+    </div>
+    <div style="padding:20px 12px;border-right:1px solid rgba(255,255,255,0.14);text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">03</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">L'Audience</div>
+    </div>
+    <div style="padding:20px 12px;border-right:1px solid rgba(255,255,255,0.14);text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">04</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">Le Film</div>
+    </div>
+    <div style="padding:20px 12px;border-right:1px solid rgba(255,255,255,0.14);text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">05</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">Contenus Courts</div>
+    </div>
+    <div style="padding:20px 12px;text-align:center;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:28px;color:var(--accent);margin-bottom:6px;">06</div>
+      <div style="font-size:10px;font-weight:500;color:#fff;letter-spacing:0.06em;text-transform:uppercase;">Le Message</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 01 : DÉCOUVERTE ═══════ -->
+<section class="phase-section dark" id="phase1">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Pilier 01</div>
+      <div class="phase-num-ghost">01</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="color:rgba(255,255,255,0.6);margin-bottom:24px;">Le Chou est identifiable à sa façade, comme n'importe quelle pâtisserie de centre-ville. Ce que la rue ne montre pas, c'est le salon haussmannien et la grande cour intérieure derrière. Ce pilier installe la promesse avant même d'entrer : ici, ce n'est pas qu'une pâtisserie.</p>
+      <div class="phase-name">FAIRE<br>DÉCOU&shy;VRIR<br>LE LIEU</div>
+    </div>
+  </div>
+  <div class="phase-context" style="display:grid;grid-template-columns:1fr 1fr;">
+    <div style="min-height:200px;max-height:200px;overflow:hidden;">
+      <img src="images/vitrine-hd.jpg" alt="Vitrine du Chou, façade rue Saint-Martin" style="width:100%;height:100%;object-fit:cover;object-position:center 55%;display:block;">
+    </div>
+    <div class="phase-ctx-right">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.55);">Estelle et Céline l'estiment elles-mêmes : la cour et le salon leur permettraient de faire jusqu'à 70&nbsp;% de couverts en plus. Un potentiel qui commence par le faire savoir — personne ne devine ce lieu depuis la rue.</p>
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">« On pousse la porte »<br>Découverte du salon</div>
+      <p class="format-desc">La façade discrète, puis le salon haussmannien, puis la cour. Céline et Estelle accueillent à l'image, ton parlé, un sourire — la découverte du lieu racontée par celles qui l'ont créé.</p>
+      <span class="format-tag">Reels · Instagram / Facebook</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">« Céline &amp; Estelle vous ouvrent la porte »<br>Micro-portrait</div>
+      <p class="format-desc">Les deux fondatrices présentent leur maison en quelques phrases, gourmandes et complices, entre deux services : pourquoi cette cour, ce qu'elles veulent qu'on y trouve.</p>
+      <span class="format-tag">Reels · Instagram / Facebook</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">« La façade qui cache son jeu »<br>Format court et récurrent</div>
+      <p class="format-desc">Format court et régulier : la vitrine discrète, puis la cour qui s'ouvre. De quoi installer l'idée qu'on découvre un lieu, pas juste une carte.</p>
+      <span class="format-tag">Reels Courts · Hebdomadaire</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 1</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">↑</div><div class="format-desc">notoriété du Chou comme lieu, au-delà de la pâtisserie déjà connue</div></div>
+        <div><div class="kpi-val">15 000</div><div class="format-desc">abonnés visés d'ici mars 2027</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">recherches et mentions du lieu, cour comprise</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:4px;">La vidéo phare</div>
+      <div class="kpi-val" style="font-size:44px;">70%</div>
+      <div class="kpi-desc">de couverts en plus estimés si la cour et le salon étaient connus</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : la vidéo phare</div>
+      <p class="vision-text">La porte du 17 rue Saint-Martin s'ouvre. Céline et Estelle sont là, sourire complice, ton naturel : « Bienvenue chez nous. » La caméra suit leur pas jusqu'au salon haussmannien, puis jusqu'à la cour. Une accroche gourmande, un petit terme rigolo qui leur ressemble, en légende.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 02 : CONSIDÉRATION ═══════ -->
+<section class="phase-section" id="phase2">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="margin-bottom:8px;">Pilier 02</div>
+      <div class="phase-num-ghost">02</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="margin-bottom:24px;">Tout est fait maison, rien n'est acheté — et elles veulent que ça se sache. Vendre moins, vendre mieux : la différenciation se joue sur le goût, la finesse, la qualité. Ce pilier montre le geste, pas seulement le résultat en photo.</p>
+      <div class="phase-name">MONTRER<br>LE FAIT<br>MAISON</div>
+    </div>
+  </div>
+  <div class="phase-context" style="display:grid;grid-template-columns:1fr 1fr;">
+    <div class="phase-ctx-right">
+      <div class="label" style="margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:#555;">Le fait maison est leur positionnement revendiqué, mais il ne se voit nulle part aujourd'hui. Montrer la matière, la préparation, le geste, c'est transformer une affirmation en preuve.</p>
+    </div>
+    <div style="overflow:hidden;height:260px;">
+      <img src="images/camera-02.jpg" alt="Fait maison au Chou" style="width:100%;height:260px;object-fit:cover;object-position:center center;">
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">« Rien n'est acheté »<br>Coulisses du fait maison</div>
+      <p class="format-desc">La matière première, la préparation, le geste. Bien cadré, net, un rythme dynamique — ce que « tout fait maison » veut vraiment dire, montré plutôt qu'affirmé.</p>
+      <span class="format-tag">Reels · Instagram / Facebook</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">« Le Tea Time, six pièces, un geste »<br>Focus produit signature</div>
+      <p class="format-desc">Les six pièces sucrées du Tea Time, préparées puis dressées. Ton gourmand, léger — la finesse comme argument, pas comme mot vide.</p>
+      <span class="format-tag">Reels · Instagram / Facebook</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">« La carte qui change »<br>Rendez-vous de saison</div>
+      <p class="format-desc">À chaque nouvelle carte, un épisode filmé : les nouvelles pâtisseries présentées par Céline ou Estelle, ton parlé et souriant. Un rendez-vous que l'audience apprend à attendre.</p>
+      <span class="format-tag">Reels Courts · À chaque refonte de carte</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 2</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">↑</div><div class="format-desc">perception du fait maison comme preuve, pas seulement comme discours</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">engagement sur les publications montrant le geste</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">développement de l'engagement général, objectif nommé en RDV</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="margin-bottom:4px;">La vidéo phare</div>
+      <div class="kpi-val" style="font-size:44px;">6</div>
+      <div class="kpi-desc">pièces sucrées du Tea Time, chacune un exemple du geste fait maison</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : la vidéo phare</div>
+      <p class="vision-text"><strong style="color:var(--vert);">Céline pose une pâtisserie du jour</strong> sur le marbre du comptoir. Elle ne parle pas à la caméra, elle parle du produit — l'ingrédient, pourquoi il est arrivé cette semaine, la texture qu'on va trouver dedans. Ton gourmand, sourire, jamais scolaire. En quelques secondes, le fait maison devient une évidence, pas un argument.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 03 : ÉVALUATION ═══════ -->
+<section class="phase-section dark" id="phase3">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Pilier 03</div>
+      <div class="phase-num-ghost">03</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="color:rgba(255,255,255,0.6);margin-bottom:24px;">Le Chou touche aujourd'hui un public de 18 à 70 ans, moyenne 30-40. Les hommes en font moins partie. Développer l'engagement passe par Facebook autant que par Instagram, par un produit d'entrée que la pâtisserie seule n'offre pas — le café, le brunch salé du midi — et par ceux qui ne peuvent pas s'asseoir : la clientèle de passage, le midi en semaine, la vente à emporter.</p>
+      <div class="phase-name">ÉLARGIR<br>L'AUDI&shy;ENCE</div>
+    </div>
+  </div>
+  <div class="phase-context">
+    <div class="phase-ctx-right">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.55);">Le café fraîchement torréfié et le brunch salé du midi ne sont aujourd'hui filmés par personne, alors qu'ils touchent une audience que la pâtisserie sucrée seule n'attire pas encore. La bio Instagram renvoie déjà vers une commande en ligne via L'Addition, mais aucun contenu ne renvoie vers ce lien — un levier existant et inutilisé.</p>
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">« Le café qu'on ne regarde jamais »<br>Focus produit, Facebook &amp; Instagram</div>
+      <p class="format-desc">La mouture, l'extraction, la tasse posée sur le marbre. Bien cadré, net, un rythme dynamique — le café mérite le même soin que la pâtisserie, diffusé sur les deux plateformes.</p>
+      <span class="format-tag">Reels Courts · Facebook / Instagram</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">« Venez comme vous êtes »<br>Brunch salé du midi</div>
+      <p class="format-desc">Une table de brunch salé, filmée avec dynamisme, ton parlé et souriant. Un format complet qui fait venir des hommes et des 50-60 ans à table, pas seulement en vitrine.</p>
+      <span class="format-tag">Reels · Facebook / Instagram</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">« Ce qu'en disent les habitués »<br>Avis client filmé</div>
+      <p class="format-desc">Un client régulier raconte ce qui le fait revenir. Votre réputation prend un visage — y compris celui d'une clientèle qu'on ne voit pas encore assez.</p>
+      <span class="format-tag">Reels / Facebook</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 3</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">↑</div><div class="format-desc">part de l'audience masculine touchée</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">engagement développé sur Facebook et Instagram</div></div>
+        <div><div class="kpi-val">20 000<br>à 30 000</div><div class="format-desc">vues par Reel visées d'ici mars 2027</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:4px;">La vidéo phare</div>
+      <div class="kpi-val" style="font-size:36px;">12 / 40</div>
+      <div class="kpi-desc">Reels dépassant déjà votre nombre d'abonnés — la portée sort de l'audience acquise, mais sans régularité</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : la vidéo phare</div>
+      <p class="vision-text">Une table de brunch dressée dans la cour, salée et sucrée côte à côte, une tasse de café qui fume. Céline ou Estelle sert, commente, sourit à la caméra — ton parlé, chaleureux, jamais figé. Le Chou donne envie de s'installer, pas seulement d'emporter.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 04 : CONVERSION ═══════ -->
+<section class="phase-section" id="phase4">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="margin-bottom:8px;">Pilier 04</div>
+      <div class="phase-num-ghost">04</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="margin-bottom:24px;">Un film pilier, unique, qui repose sur Estelle et Céline à l'image, le lieu, et le fait maison. Il alterne salon haussmannien, cour intérieure et gestes de préparation, avec le ton naturel et souriant qu'elles réclament.</p>
+      <div class="phase-name">LE FILM<br>SIGNA&shy;TURE</div>
+    </div>
+  </div>
+  <div class="phase-context" style="display:grid;grid-template-columns:1fr 1fr;">
+    <div style="overflow:hidden;height:260px;border-right:1px solid var(--rule);">
+      <img src="images/camera-01.jpg" alt="Tournage du film signature Le Chou" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.85);">
+    </div>
+    <div class="phase-ctx-right">
+      <div class="label" style="margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:#555;">Le Chou n'a jamais eu de film qui le représente dans son ensemble. Un seul film, réutilisable partout, porte à lui seul le lieu, le fait maison et l'accueil — plutôt que des fragments épars.</p>
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">Qui apparaît</div>
+      <p class="format-desc">Estelle et Céline à l'image d'un bout à l'autre, ton parlé, sourire, un petit terme rigolo qui leur ressemble. Pas de voix off anonyme : ce sont elles qui racontent leur maison.</p>
+      <span class="format-tag">Film Signature · Séquence d'ouverture</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">Ce que le film alterne</div>
+      <p class="format-desc">Le salon haussmannien, la cour intérieure sans vue depuis la rue, puis le geste fait maison en cuisine. Trois preuves dans un seul film, bien cadré, dynamique et chaleureux.</p>
+      <span class="format-tag">Film Signature · Corps du film</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">Ce qu'il permet</div>
+      <p class="format-desc">Un film long pour le site et les réseaux, décliné en plusieurs formats courts pour Instagram, Facebook et TikTok. Un seul tournage, plusieurs vies.</p>
+      <span class="format-tag">Film Signature · Déclinaisons</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 4</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">1</div><div class="format-desc">film signature, réutilisable sur tous les canaux</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">temps de visionnage et complétion sur le film long</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">reconnaissance du Chou comme lieu, pas seulement comme pâtisserie</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="margin-bottom:4px;">La vidéo phare</div>
+      <div class="kpi-val" style="font-size:44px;">1</div>
+      <div class="kpi-desc">film qui porte à lui seul le lieu, le fait maison et l'accueil</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : la vidéo phare</div>
+      <p class="vision-text">La porte s'ouvre sur Estelle et Céline, ton naturel, sourire. La caméra les suit du salon à la cour, puis en cuisine pour un geste fait maison. Chaleureux d'un bout à l'autre, jamais contemplatif : le film qui dit, en une fois, tout ce que Le Chou est.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 05 : EXPÉRIENCE CLIENT ═══════ -->
+<section class="phase-section dark" id="phase5">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:8px;">Pilier 05</div>
+      <div class="phase-num-ghost">05</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="color:rgba(255,255,255,0.6);margin-bottom:24px;">Chaque journée de tournage produit plus que le film signature : des capsules courtes, tirées du même moment, publiées sur la durée. C'est ce qui tient le rythme entre deux sessions.</p>
+      <div class="phase-name">LES<br>CONTENUS<br>COURTS</div>
+    </div>
+  </div>
+  <div class="phase-context">
+    <div class="phase-ctx-right">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:rgba(255,255,255,0.55);">Un Reel toutes les deux semaines ne suffit pas à tenir mars 2027. Des capsules courtes, produites sur le même tournage que le film signature, permettent de publier plus souvent sans multiplier les journées sur site.</p>
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">« Le geste de Céline »<br>Capsule coulisses</div>
+      <p class="format-desc">Le garnissage d'un choux face caméra, à hauteur de comptoir. La poche à douille, le geste précis, la garniture qui monte jusqu'au ras du craquelin. Ton dynamique, pas de silence.</p>
+      <span class="format-tag">Reels Courts · En boutique</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">« La carte qui change »<br>Capsule menu</div>
+      <p class="format-desc">À chaque nouvelle carte, une capsule courte présente les nouveautés, ton complice, léger. Un rendez-vous récurrent tiré du même socle de contenu.</p>
+      <span class="format-tag">Capsule Menu · À chaque refonte de carte</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">« Le café qui repart avec vous »<br>Capsule à emporter</div>
+      <p class="format-desc">Le café de passage, la boîte de pâtisseries qui se ferme, le geste d'emballage. Ton naturel et gourmand, pas contemplatif — la vente à emporter montrée comme un plaisir, pas une transaction.</p>
+      <span class="format-tag">Reels Courts · À emporter</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 5</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">↑</div><div class="format-desc">fréquence de publication, au-delà d'un Reel toutes les deux semaines</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">engagement sur les capsules courtes</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">contenus tirés d'un même tournage, sans session supplémentaire</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:4px;">La vidéo phare</div>
+      <div class="kpi-val" style="font-size:40px;">243</div>
+      <div class="kpi-desc">avis à 4,8/5 aujourd'hui muets à l'image — une preuve sociale qui ne s'est jamais vue</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : la vidéo phare</div>
+      <p class="vision-text">Céline tient une poche à douille au-dessus d'un choux ouvert en deux. Le geste est précis, répété des centaines de fois. Ton parlé, un commentaire léger en passant, un sourire — pas de silence contemplatif : la capsule qui montre le savoir-faire sans jamais paraître scolaire.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ PHASE 06 : AMBASSADEUR ═══════ -->
+<section class="phase-section" id="phase6">
+  <div class="phase-header">
+    <div class="phase-header-left">
+      <div class="label" style="margin-bottom:8px;">Pilier 06</div>
+      <div class="phase-num-ghost">06</div>
+    </div>
+    <div class="phase-header-right">
+      <p class="body-copy" style="margin-bottom:24px;">Cinq piliers de contenu ne suffisent pas sans un message tenu dans la durée. Trois idées fortes reviennent d'un format à l'autre, pour que Le Chou reste reconnaissable quel que soit le canal.</p>
+      <div class="phase-name">LE<br>MESSAGE</div>
+    </div>
+  </div>
+  <div class="phase-context">
+    <div class="phase-ctx-right">
+      <div class="label" style="margin-bottom:16px;">L'opportunité</div>
+      <p style="font-size:13.5px;font-weight:300;line-height:1.75;color:#555;">Cent vidéos déjà publiées, mais aucun message qui se répète d'un contenu à l'autre. Répéter les mêmes trois idées, sous des formats différents, construit une reconnaissance que le volume seul n'a pas produite.</p>
+    </div>
+  </div>
+  <div class="phase-formats">
+    <div class="format-card">
+      <div class="format-num">01</div>
+      <div class="format-title">Tout est fait maison</div>
+      <p class="format-desc">L'idée revient dans chaque pilier : rien n'est acheté, tout se prépare sur place. Répétée, elle finit par s'installer.</p>
+      <span class="format-tag">Message central</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">02</div>
+      <div class="format-title">Un lieu qu'on ne devine pas depuis la rue</div>
+      <p class="format-desc">Le salon haussmannien, la cour intérieure : l'idée de la découverte revient à chaque format, sans jamais être épuisée en une seule vidéo.</p>
+      <span class="format-tag">Message central</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">03</div>
+      <div class="format-title">Un accueil chaleureux et souriant</div>
+      <p class="format-desc">Estelle et Céline à l'image, ton parlé, humour léger : le registre demandé devient la signature reconnaissable de la maison.</p>
+      <span class="format-tag">Message central</span>
+    </div>
+    <div class="format-card">
+      <div class="format-num">KPIs</div>
+      <div class="format-title">Objectifs Pilier 6</div>
+      <div style="display:flex;flex-direction:column;gap:12px;margin-top:8px;">
+        <div><div class="kpi-val">3</div><div class="format-desc">idées fortes tenues sur l'ensemble des formats produits</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">reconnaissance du ton Le Chou d'un contenu à l'autre</div></div>
+        <div><div class="kpi-val">↑</div><div class="format-desc">engagement développé, objectif nommé en RDV</div></div>
+      </div>
+    </div>
+  </div>
+  <div class="phase-vision">
+    <div class="phase-vision-left">
+      <div class="label" style="margin-bottom:4px;">Utilisation</div>
+      <div class="kpi-val" style="font-size:36px;">5</div>
+      <div class="kpi-desc">canaux de diffusion : Instagram, Facebook, TikTok, la fiche Google, lechouangers.fr</div>
+    </div>
+    <div class="phase-vision-right">
+      <div class="vision-label">Vision : où les contenus vivent</div>
+      <p class="vision-text">Le film signature et les capsules courtes circulent sur Instagram et Facebook en priorité, avec une présence sur TikTok. La fiche Google, régulièrement consultée avant la visite, et lechouangers.fr — que Céline gère elle-même — reçoivent le film signature en page d'accueil.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ BG BREAK : ORANGE GRADIENT ═══════ -->
+<div style="position:relative;height:340px;overflow:hidden;background:radial-gradient(ellipse at 65% 35%, #3A6244 0%, #2C4A33 55%, #1B3021 100%);">
+  <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;">
+    <div style="border-right:1px solid rgba(255,255,255,0.14);"></div>
+    <div style="border-right:1px solid rgba(255,255,255,0.14);"></div>
+    <div style="border-right:1px solid rgba(255,255,255,0.14);"></div>
+    <div></div>
+  </div>
+  <div style="position:absolute;top:50%;left:0;right:0;border-top:1px solid rgba(255,255,255,0.14);"></div>
+  <div style="position:absolute;bottom:32px;left:32px;">
+    <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:11px;letter-spacing:0.2em;color:rgba(255,255,255,0.5);text-transform:uppercase;">JMStudio × Le Chou Angers : 2026</div>
+  </div>
+  <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none;">
+    <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(80px,14vw,200px);line-height:0.85;color:rgba(255,255,255,0.15);letter-spacing:0.02em;text-align:center;text-transform:uppercase;user-select:none;">LE CHOU</div>
+  </div>
+</div>
+
+<!-- ═══════ TROIS NIVEAUX D'ENGAGEMENT ═══════ -->
+<section style="background:var(--black);border-bottom:1px solid rgba(255,255,255,0.12);" id="offres">
+  <div class="g2" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div style="padding:64px 40px;border-right:1px solid rgba(255,255,255,0.12);display:flex;flex-direction:column;justify-content:center;">
+      <div class="label" style="color:rgba(255,255,255,0.4);margin-bottom:20px;">Investissement</div>
+      <div class="display display-lg white">LES<br>OFFRES<br>PROPO&shy;SÉES</div>
+      <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.7;margin-top:20px;max-width:380px;">Trois niveaux possibles, un seul objectif : tenir l'échéance de mars 2027 sur les six piliers.</p>
+    </div>
+    <div style="display:flex;flex-direction:column;">
+      <div style="overflow:hidden;height:260px;flex:none;">
+        <img src="images/cam-engag.jpg" alt="" style="width:100%;height:100%;object-fit:cover;filter:brightness(0.85);">
+      </div>
+      <div style="padding:36px 40px;">
+        <ul class="bullet-list dark" style="margin-top:0;max-width:460px;">
+          <li>Une vidéo : un film écrit, tourné et monté pour lui-même, livré en plusieurs formats.</li>
+          <li>Un contenu court : une déclinaison issue de la même session de tournage, pensée pour le rythme de publication.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div style="padding:24px 24px 24px 40px;border-right:1px solid rgba(255,255,255,0.12);">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:34px;color:var(--accent);line-height:1;margin-bottom:6px;">4K</div>
+      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.5;">Tournage &amp; rendu en qualité 4K sur tous les niveaux</div>
+    </div>
+    <div style="padding:24px;border-right:1px solid rgba(255,255,255,0.12);">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:34px;color:var(--accent);line-height:1;margin-bottom:6px;">1 mois</div>
+      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.5;">Livraison en un mois maximum, tous niveaux confondus</div>
+    </div>
+    <div style="padding:24px;border-right:1px solid rgba(255,255,255,0.12);">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:34px;color:var(--accent);line-height:1;margin-bottom:6px;">18</div>
+      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.5;">Propositions de contenu écrites pour Le Chou</div>
+    </div>
+    <div style="padding:24px 40px 24px 24px;">
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:34px;color:var(--accent);line-height:1;margin-bottom:6px;">∞</div>
+      <div style="font-size:11px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.5;">Droits d'exploitation illimités inclus</div>
+    </div>
+  </div>
+
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);padding:56px 40px 32px;">
+      <div style="grid-column:1 / 3;">
+        <div class="label" style="color:rgba(255,255,255,0.4);"><span style="color:var(--accent);">01 —</span> DÉMARRER</div>
+        <div class="display display-lg white" style="line-height:0.96;margin-top:14px;">Un premier socle, produit en une à trois journées.</div>
+        <p style="font-size:13px;font-weight:300;color:rgba(255,255,255,0.7);line-height:1.6;margin-top:14px;">Les trois packs posent les bases — le lieu découvert, le fait maison montré, un ton installé.</p>
+      </div>
+    </div>
+
+    <div class="offre-grid" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+      <div class="offre-card">
+        <div class="offre-head" style="min-height:0;">
+          <div class="offre-name" style="color:var(--accent);"><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Niveau</span> Essentiel</div>
+          <div class="offre-tarif" style="font-size:clamp(38px,4.4vw,63px);margin-bottom:12px;display:flex;align-items:baseline;gap:10px;">1 950 <span style="font-family:'DM Sans',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">&euro; HT</span></div>
+          <div style="font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:20px;">Le lieu &amp; le fait maison</div>
+          <p class="offre-obj">Pensé pour poser un premier socle : le lieu découvert, le fait maison montré, un ton installé — avant d'aller plus loin.</p>
+        </div>
+        <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Contenu livré : 3 vidéos, choisies parmi les dix-huit</div>
+        <div class="offre-items">
+          <div class="offre-num-item"><span class="offre-num-index">01</span><div class="offre-num-text"><span class="offre-num-title">« On pousse la porte »</span><span class="offre-num-detail">Découverte du salon</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">02</span><div class="offre-num-text"><span class="offre-num-title">« Rien n'est acheté »</span><span class="offre-num-detail">Coulisses du fait maison</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">03</span><div class="offre-num-text"><span class="offre-num-title">Un troisième format</span><span class="offre-num-detail">Choisi ensemble en rendez-vous</span></div></div>
+        </div>
+        <div class="offre-logi">
+          <div class="offre-logi-row"><span>Vidéos livrées</span><span>3</span></div>
+          <div class="offre-logi-row"><span>Journées de tournage</span><span>1</span></div>
+          <div class="offre-logi-row"><span>Sous-titres &amp; motion</span><span>Sous-titres seuls</span></div>
+          <div class="offre-logi-row"><span>Livraison</span><span>10 jours ouvrés</span></div>
+          <div class="offre-logi-row"><span>Révisions</span><span>1 cycle</span></div>
+          <div class="offre-logi-row"><span>Droits d'exploitation</span><span>Illimités</span></div>
+          <div class="offre-logi-row"><span>Paiement</span><span style="color:var(--cream);font-weight:600;">En 2 fois</span></div>
+        </div>
+        <a href="#contact" class="offre-btn outline">Je valide cette formule</a>
+      </div>
+
+      <div class="offre-card featured">
+        <div class="offre-badge">Recommandé</div>
+        <div class="offre-head" style="min-height:0;">
+          <div class="offre-name" style="color:var(--accent);"><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Niveau</span> Évolution</div>
+          <div class="offre-tarif" style="font-size:clamp(38px,4.4vw,63px);margin-bottom:12px;display:flex;align-items:baseline;gap:10px;">3 900 <span style="font-family:'DM Sans',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">&euro; HT</span></div>
+          <div style="font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:20px;">Un format par pilier</div>
+          <p class="offre-obj">Pensé pour couvrir les six piliers de la stratégie : le lieu, le fait maison, l'audience élargie, le film signature, les contenus courts, le message.</p>
+        </div>
+        <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Contenu livré : le film signature + 5 formats</div>
+        <div class="offre-items">
+          <div class="offre-num-item"><span class="offre-num-index">01</span><div class="offre-num-text"><span class="offre-num-title">Le film signature</span><span class="offre-num-detail">Tourné en une session</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">02</span><div class="offre-num-text"><span class="offre-num-title">Un format par pilier</span><span class="offre-num-detail">Choisi parmi les dix-huit</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">03</span><div class="offre-num-text"><span class="offre-num-title">Motion design léger</span><span class="offre-num-detail">Titrages animés et transitions</span></div></div>
+        </div>
+        <div class="offre-logi">
+          <div class="offre-logi-row"><span>Vidéos livrées</span><span>6</span></div>
+          <div class="offre-logi-row"><span>Journées de tournage</span><span>2</span></div>
+          <div class="offre-logi-row"><span>Sous-titres &amp; motion</span><span>Inclus</span></div>
+          <div class="offre-logi-row"><span>Livraison</span><span>15 jours ouvrés</span></div>
+          <div class="offre-logi-row"><span>Révisions</span><span>2 cycles</span></div>
+          <div class="offre-logi-row"><span>Droits d'exploitation</span><span>Illimités</span></div>
+          <div class="offre-logi-row"><span>Paiement</span><span style="color:var(--cream);font-weight:600;">En 3 fois</span></div>
+        </div>
+        <a href="#contact" class="offre-btn filled">Je valide cette formule</a>
+      </div>
+
+      <div class="offre-card">
+        <div class="offre-head" style="min-height:0;">
+          <div class="offre-name" style="color:var(--accent);"><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Niveau</span> Intensif</div>
+          <div class="offre-tarif" style="font-size:clamp(38px,4.4vw,63px);margin-bottom:12px;display:flex;align-items:baseline;gap:10px;">6 500 <span style="font-family:'DM Sans',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">&euro; HT</span></div>
+          <div style="font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.4);text-transform:uppercase;margin-bottom:20px;">Couverture complète</div>
+          <p class="offre-obj">Pensé pour aller au bout des dix-huit propositions : le lieu, le fait maison et le film signature couverts en profondeur, sur trois journées de tournage.</p>
+        </div>
+        <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Contenu livré : 10 vidéos</div>
+        <div class="offre-items">
+          <div class="offre-num-item"><span class="offre-num-index">01</span><div class="offre-num-text"><span class="offre-num-title">Le lieu, le fait maison et le film signature</span><span class="offre-num-detail">Couverts en profondeur</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">02</span><div class="offre-num-text"><span class="offre-num-title">Formats courts multipliés</span><span class="offre-num-detail">Sur les six piliers</span></div></div>
+          <div class="offre-num-item"><span class="offre-num-index">03</span><div class="offre-num-text"><span class="offre-num-title">Révisions illimitées</span><span class="offre-num-detail">Jusqu'à validation finale</span></div></div>
+        </div>
+        <div class="offre-logi">
+          <div class="offre-logi-row"><span>Vidéos livrées</span><span>10</span></div>
+          <div class="offre-logi-row"><span>Journées de tournage</span><span>3</span></div>
+          <div class="offre-logi-row"><span>Sous-titres &amp; motion</span><span style="color:var(--accent);">Inclus</span></div>
+          <div class="offre-logi-row"><span>Livraison</span><span>1 mois</span></div>
+          <div class="offre-logi-row"><span>Révisions</span><span>Illimitées</span></div>
+          <div class="offre-logi-row"><span>Droits d'exploitation</span><span>Illimités</span></div>
+          <div class="offre-logi-row"><span>Paiement</span><span style="color:var(--cream);font-weight:600;">En 4 fois</span></div>
+        </div>
+        <a href="#contact" class="offre-btn outline">Je valide cette formule</a>
+      </div>
+    </div>
+
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);padding:64px 40px 40px;background:var(--cream);">
+    <div style="grid-column:1 / 3;">
+      <div class="label" style="color:var(--mid);"><span style="color:var(--accent);">02 —</span> TENIR JUSQU'À MARS 2027</div>
+      <div class="display display-lg" style="line-height:0.96;margin-top:14px;color:var(--black);">Un rythme, pas une livraison.</div>
+      <p style="font-size:13px;font-weight:300;color:var(--mid);line-height:1.6;margin-top:14px;">Ce qu'aucun pack ponctuel ne permet — sept publications par mois contre deux aujourd'hui.</p>
+    </div>
+  </div>
+  <div class="offre-grid" style="grid-template-columns:1fr;">
+    <div class="offre-card">
+      <div class="g2" style="gap:56px;align-items:center;margin-bottom:44px;">
+        <div>
+          <div class="offre-name" style="color:var(--accent);"><span style="font-family:'DM Sans',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);letter-spacing:0.1em;text-transform:uppercase;">Abonnement</span> Pack Rythme</div>
+          <div class="offre-tarif" style="font-size:clamp(38px,4.4vw,63px);margin-bottom:12px;display:flex;align-items:baseline;gap:10px;">1 500 <span style="font-family:'DM Sans',sans-serif;font-weight:400;font-size:14px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);">&euro; / mois</span></div>
+          <div style="font-size:10px;letter-spacing:0.12em;color:rgba(255,255,255,0.4);text-transform:uppercase;">Engagement 3 mois, renouvelable</div>
+        </div>
+        <div>
+          <p class="offre-obj" style="margin-bottom:0;">Tenir mars 2027, ce qu'aucun pack ponctuel ne permet. Une session de tournage par mois, sept publications, un calendrier qui ne dépend plus de votre disponibilité.</p>
+        </div>
+      </div>
+
+      <div class="g3" style="gap:48px;align-items:start;">
+
+        <div>
+          <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Livré chaque mois</div>
+          <div class="offre-items">
+            <div class="offre-num-item"><span class="offre-num-index">01</span><div class="offre-num-text"><span class="offre-num-title">Une session de tournage</span><span class="offre-num-detail">Sur place, en service creux</span></div></div>
+            <div class="offre-num-item"><span class="offre-num-index">02</span><div class="offre-num-text"><span class="offre-num-title">Une vidéo pilier</span><span class="offre-num-detail">Écrite et montée pour elle-même</span></div></div>
+            <div class="offre-num-item"><span class="offre-num-index">03</span><div class="offre-num-text"><span class="offre-num-title">Six contenus courts</span><span class="offre-num-detail">Issus de la même session</span></div></div>
+            <div class="offre-num-item"><span class="offre-num-index">04</span><div class="offre-num-text"><span class="offre-num-title">Scripts et accroches</span><span class="offre-num-detail">Inclus</span></div></div>
+            <div class="offre-num-item"><span class="offre-num-index">05</span><div class="offre-num-text"><span class="offre-num-title">Publication étalée</span><span class="offre-num-detail">Sur quatre semaines</span></div></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Le détail de l'abonnement</div>
+          <div class="offre-logi" style="margin:0;padding-top:0;border-top:none;">
+            <div class="offre-logi-row"><span>Contenus livrés</span><span>7 par mois</span></div>
+            <div class="offre-logi-row"><span>Journées de tournage</span><span>1 session mensuelle</span></div>
+            <div class="offre-logi-row"><span>Sous-titres &amp; motion</span><span>Inclus</span></div>
+            <div class="offre-logi-row"><span>Livraison</span><span>Étalée sur 4 semaines</span></div>
+            <div class="offre-logi-row"><span>Révisions</span><span>1 cycle par mois</span></div>
+            <div class="offre-logi-row"><span>Droits d'exploitation</span><span>Illimités</span></div>
+            <div class="offre-logi-row"><span>Paiement</span><span style="color:var(--cream);font-weight:600;">Mensuel</span></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="offre-section-label" style="border-top:1px solid rgba(255,255,255,0.12);padding-top:20px;">Ce que la récurrence change</div>
+          <div class="calcul-box" style="border:none;border-left:2px solid var(--accent);padding:0 0 0 18px;margin-top:20px;">
+            <div class="num" style="font-size:26px;margin-bottom:6px;">400 &euro;</div>
+            <p>déduits de votre premier trimestre d'abonnement si vous enchaînez après un pack Essentiel, Évolution ou Intensif.</p>
+            <p style="font-size:10.5px;color:rgba(255,255,255,0.4);margin-top:8px;">Exemple : pack Essentiel 1 950 €, puis trois mois d'abonnement à 4 100 € au lieu de 4 500 €.</p>
+          </div>
+          <div class="calcul-box" style="border:none;border-left:2px solid var(--accent);padding:0 0 0 18px;margin-top:28px;">
+            <div class="num" style="font-size:26px;margin-bottom:6px;">&times;3,5</div>
+            <p>7 publications par mois contre 2 aujourd'hui. D'ici mars 2027&nbsp;: 42 contenus publiés au lieu de 12.</p>
+          </div>
+        </div>
+
+      </div>
+
+      <a href="#contact" class="offre-btn outline" style="margin-top:44px;">Je valide cette formule</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ RÉTROPLANNING ═══════ -->
+<section style="background:var(--cream);border-bottom:1px solid var(--rule);position:relative;overflow:hidden;">
+  <div aria-hidden="true" style="
+    position:absolute;
+    top:50%;
+    right:-160px;
+    transform:translateY(-50%);
+    width:520px;
+    height:520px;
+    background:url('images/chou-couronne.jpg') center/contain no-repeat;
+    pointer-events:none;
+    z-index:0;
+    mix-blend-mode:multiply;
+    opacity:0.10;
+  "></div>
+  <div style="position:relative;z-index:1;">
+  <div class="g2" style="border-bottom:1px solid var(--rule);">
+    <div style="padding:52px 32px;border-right:1px solid var(--rule);">
+      <div class="label" style="margin-bottom:18px;">Planning</div>
+      <div class="display display-lg">RÉTRO&shy;PLANNING</div>
+    </div>
+    <div style="padding:52px 32px;display:flex;align-items:center;">
+      <p class="prose">Des vidéos exploitables en <strong>10 à 15 jours ouvrés</strong> selon le niveau retenu. Zéro charge mentale pour Céline et Estelle : je gère l'ensemble du processus de bout en bout, à commencer par la découverte du lieu.</p>
+    </div>
+  </div>
+  <div style="padding:0 32px 40px;">
+    <table class="retro-table">
+      <thead>
+        <tr><th>Étape</th><th>Délai</th><th>Détail</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Repérage sur site</td><td>J0</td><td>Première visite du lieu — le rendez-vous découverte s'est tenu par téléphone, la cour et le salon n'ont jamais été vus</td></tr>
+        <tr><td>Cadrage</td><td>J0 → J+5</td><td>Brief créatif avec Céline et Estelle, storyboard construit sur les piliers retenus</td></tr>
+        <tr><td>Tournage</td><td>J+7 → J+9</td><td>1 à 2 journées, en service creux, sur vos horaires (mardi-samedi, 11h-18h), sans perturber la salle</td></tr>
+        <tr><td>Livraison finale</td><td>J+10 → J+15</td><td>Selon le niveau retenu : 10 jours ouvrés (Essentiel) ou 15 jours ouvrés (Évolution)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  </div>
+</section>
+
+<!-- ═══════ MES ENGAGEMENTS ═══════ -->
+<section style="background:var(--black);border-bottom:1px solid rgba(255,255,255,0.12);">
+  <div class="g2" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div style="padding:52px 32px;border-right:1px solid rgba(255,255,255,0.12);">
+      <div class="label" style="color:rgba(255,255,255,0.4);margin-bottom:18px;">Ma manière de travailler</div>
+      <div class="display display-lg white">GARAN&shy;TIES</div>
+    </div>
+    <div style="padding:52px 32px;display:flex;align-items:center;">
+      <p class="prose" style="color:rgba(255,255,255,0.7);">Je travaille seul, et c'est un choix. Quand on se parle, c'est moi. Quand la caméra tourne dans la cour intérieure ou devant le comptoir, c'est moi. Le Chou mérite un interlocuteur qui connaît la maison, pas une équipe qui tourne pour plusieurs clients à la fois.</p>
+    </div>
+  </div>
+  <div class="engage-grid">
+    <div class="engage-cell">
+      <div class="engage-num">01</div>
+      <div class="engage-title">Livrables définis, prêts à publier</div>
+      <p class="engage-desc">Le nombre de vidéos, formats et cycles de révision sont fixés au niveau retenu. Tournage et rendu en 4K, sous-titrés, prêts à mettre en ligne.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">02</div>
+      <div class="engage-title">Un interlocuteur unique</div>
+      <p class="engage-desc">Du repérage sur site à la livraison finale : cadrage, tournage, montage, sous-titrage.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">03</div>
+      <div class="engage-title">Révisions incluses</div>
+      <p class="engage-desc">1 à 2 cycles de révision selon le niveau retenu, pour ajuster avant livraison finale.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">04</div>
+      <div class="engage-title">Délais contractuels, zéro perturbation</div>
+      <p class="engage-desc">10 à 15 jours ouvrés selon le niveau. Tournage en service creux, sur vos horaires, sans perturber la salle.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ DROITS ET CONDITIONS ═══════ -->
+<section style="background:var(--black);border-bottom:1px solid rgba(255,255,255,0.12);" id="conditions">
+  <div class="g2" style="border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div style="padding:52px 32px;border-right:1px solid rgba(255,255,255,0.12);">
+      <div class="label" style="color:rgba(255,255,255,0.4);margin-bottom:18px;">Ce qui est contractuel</div>
+      <div class="display display-lg white">DROITS ET<br>CONDI&shy;TIONS</div>
+    </div>
+    <div style="padding:52px 32px;display:flex;align-items:center;">
+      <p class="prose" style="color:rgba(255,255,255,0.7);">Les modalités précises — pourcentages, délais de rétractation — sont fixées au contrat signé au moment de la validation. Ce qui suit en pose le principe.</p>
+    </div>
+  </div>
+  <div class="engage-grid">
+    <div class="engage-cell">
+      <div class="engage-num">01</div>
+      <div class="engage-title">Droits d'utilisation</div>
+      <p class="engage-desc">Cession complète pour vos réseaux sociaux et votre site, sans limite de durée. Les campagnes publicitaires payantes font l'objet d'une option distincte.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">02</div>
+      <div class="engage-title">Rushs bruts</div>
+      <p class="engage-desc">Non inclus dans les formules de base, disponibles en option sur demande.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">03</div>
+      <div class="engage-title">Acompte &amp; solde</div>
+      <p class="engage-desc">Un acompte à la commande, le solde à la livraison. Paiement en plusieurs fois possible, notamment sur la formule Récurrence.</p>
+    </div>
+    <div class="engage-cell">
+      <div class="engage-num">04</div>
+      <div class="engage-title">Retard, annulation &amp; report</div>
+      <p class="engage-desc">Conditions de retard de paiement, d'annulation et de report précisées au contrat signé en rendez-vous.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════ RÉFÉRENCES ═══════ -->
+<section style="background:var(--cream);border-bottom:1px solid var(--rule);">
+  <div class="section-intro">
+    <div class="section-intro-left">
+      <div class="label" style="margin-bottom:18px;">Ils m'ont fait confiance</div>
+      <div class="display display-lg">RÉFÉRENCES</div>
+    </div>
+    <div class="section-intro-right" style="display:flex;align-items:center;">
+      <p class="prose">Approche reconnue pour la qualité du rendu visuel, la fluidité de collaboration, et la capacité à mettre en valeur des lieux et des produits avec une esthétique cinématique.</p>
+    </div>
+  </div>
+  <div class="ref-grid">
+    <div class="ref-cell"><div class="ref-name">La Station</div><div class="ref-desc">Production vidéo événementielle</div></div>
+    <div class="ref-cell"><div class="ref-name">Naobike</div><div class="ref-desc">Vidéo produit &amp; motion design</div></div>
+    <div class="ref-cell"><div class="ref-name">Beebike</div><div class="ref-desc">Contenus réseaux sociaux</div></div>
+    <div class="ref-cell"><div class="ref-name">Ride With Mortimer</div><div class="ref-desc">Film de marque &amp; Reels</div></div>
+    <div class="ref-cell"><div class="ref-name">Mât de Misaine</div><div class="ref-desc">Production vidéo &amp; étalonnage</div></div>
+    <div class="ref-cell"><div class="ref-name">G-Star Raw</div><div class="ref-desc">Motion design &amp; post-production</div></div>
+  </div>
+  <div style="padding:24px 32px;border-top:1px solid var(--rule);background:#f8f8f8;">
+    <div style="font-size:12px;font-weight:300;color:#888;font-style:italic;">Espace réservé : vignettes ou liens vers vidéos de démonstration à intégrer</div>
+  </div>
+</section>
+
+<!-- ═══════ IMPACT VIDÉO 12 MOIS ═══════ -->
+<section class="vision-section" id="vision">
+  <div class="vision-header">
+    <div class="vision-title-cell">
+      <div class="label" style="color:rgba(255,255,255,0.4);margin-bottom:18px;">L'échéance de votre objectif</div>
+      <div class="display display-xl white" style="font-size:clamp(42px,6.2vw,88px);">RÉSULTATS<br>ATTENDUS</div>
+    </div>
+    <div class="vision-intro-cell">
+      <p class="body-copy-lg" style="color:rgba(255,255,255,0.7);">D'ici mars 2027, Le Chou n'est plus seulement « connu pour ses pâtisseries ». C'est devenu la maison dont le <strong style="color:var(--cream);font-weight:500;">lieu se découvre autant que le fait maison se déguste</strong>, sur Angers et au-delà du cercle déjà acquis. Scénario, pas mesure acquise.</p>
+    </div>
+  </div>
+  <div class="vision-pillars">
+    <div class="vision-pillar">
+      <div class="pillar-num">01</div>
+      <div class="pillar-title">Le lieu découvert</div>
+      <p class="pillar-body">Le salon haussmannien et la cour intérieure, aujourd'hui invisibles depuis la rue, devenus la raison de pousser la porte.</p>
+    </div>
+    <div class="vision-pillar">
+      <div class="pillar-num">02</div>
+      <div class="pillar-title">Le fait maison prouvé</div>
+      <p class="pillar-body">Le geste, la matière, la préparation montrés — la différenciation revendiquée devenue une preuve visible.</p>
+    </div>
+    <div class="vision-pillar">
+      <div class="pillar-num">03</div>
+      <div class="pillar-title">L'audience élargie</div>
+      <p class="pillar-body">Des hommes et des 50-60 ans touchés via Facebook autant qu'Instagram, par le café et le brunch du midi.</p>
+    </div>
+    <div class="vision-pillar">
+      <div class="pillar-num">04</div>
+      <div class="pillar-title">Le film signature installé</div>
+      <p class="pillar-body">Un film qui porte le lieu, le fait maison et l'accueil, réutilisé sur le site et l'ensemble des réseaux.</p>
+    </div>
+    <div class="vision-pillar">
+      <div class="pillar-num">05</div>
+      <div class="pillar-title">Un rythme tenu</div>
+      <p class="pillar-body">Des contenus courts publiés au-delà d'un Reel toutes les deux semaines, tirés des mêmes tournages.</p>
+    </div>
+    <div class="vision-pillar">
+      <div class="pillar-num">06</div>
+      <div class="pillar-title">Un message reconnu</div>
+      <p class="pillar-body">Trois idées fortes tenues d'un format à l'autre : le fait maison, le lieu, l'accueil chaleureux.</p>
+    </div>
+  </div>
+  <div class="vision-impact-row">
+    <div class="impact-cell"><div class="impact-val">15 000</div><div class="impact-desc">abonnés visés d'ici mars 2027</div></div>
+    <div class="impact-cell"><div class="impact-val">20-30K</div><div class="impact-desc">vues par Reel visées d'ici mars 2027</div></div>
+    <div class="impact-cell"><div class="impact-val">↑</div><div class="impact-desc">fréquentation du midi en semaine, aujourd'hui creux</div></div>
+    <div class="impact-cell"><div class="impact-val">↑</div><div class="impact-desc">fréquentation de la cour l'été, aujourd'hui creuse</div></div>
+    <div class="impact-cell"><div class="impact-val">↑</div><div class="impact-desc">ventes à emporter — boissons et pâtisseries — le seul objectif mesuré en chiffre d'affaires, pas en portée</div></div>
+  </div>
+</section>
+
+<!-- ═══════ SECOND ORANGE BREAK ═══════ -->
+<div style="position:relative;min-height:280px;overflow:visible;background:linear-gradient(120deg, #8A4A14 0%, #B5651D 45%, #D98F52 100%);">
+  <!-- Grid overlay -->
+  <div style="position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);pointer-events:none;">
+    <div style="border-right:1px solid rgba(0,0,0,0.12);"></div>
+    <div style="border-right:1px solid rgba(0,0,0,0.12);"></div>
+    <div style="border-right:1px solid rgba(0,0,0,0.12);"></div>
+    <div></div>
+  </div>
+  <!-- Left: big number -->
+  <div style="position:absolute;left:40px;top:50%;transform:translateY(-50%);">
+    <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(100px,16vw,180px);line-height:0.85;color:rgba(0,0,0,0.1);letter-spacing:-0.02em;user-select:none;">2026</div>
+  </div>
+  <!-- Right: editorial statement -->
+  <div style="position:absolute;right:48px;top:50%;transform:translateY(-50%);text-align:right;max-width:520px;padding-right:32px;overflow:visible;">
+    <div style="font-size:10px;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:rgba(0,0,0,0.45);font-family:'DM Sans',sans-serif;margin-bottom:14px;">JMStudio × Le Chou Angers</div>
+    <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(28px,4vw,48px);line-height:1.15;color:#000;text-transform:uppercase;letter-spacing:0.01em;">Le Chou travaille<br>même porte fermée</div>
+    <div style="font-family:'DM Sans',sans-serif;font-size:14px;font-weight:300;letter-spacing:0.08em;margin-top:14px;color:rgba(0,0,0,0.45);">Mardi-samedi, 11h-18h</div>
+  </div>
+  <!-- Horizontal rule center -->
+  <div style="position:absolute;left:25%;right:0;top:50%;height:1px;background:rgba(0,0,0,0.12);pointer-events:none;"></div>
+</div>
+
+<!-- ═══════ CTA / PROCHAINE ÉTAPE ═══════ -->
+<section class="cta-section" id="contact">
+  <div class="cta-left" style="padding:0 32px 72px;">
+    <div>
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:18px;">Prochaine étape</div>
+      <div class="display white" style="font-family:'Playfair Display',serif;font-weight:900;font-size:clamp(32px,4.4vw,63px);line-height:1;margin-bottom:28px;">
+        VALIDONS LA FORMULE<br>QUI VOUS CORRESPOND.
+      </div>
+      <p style="font-size:15px;font-weight:300;line-height:1.85;color:rgba(255,255,255,0.72);max-width:520px;">
+        Ce document est la proposition présentée aujourd'hui. La validation se fait par le choix d'un niveau, la signature, et un acompte pour lancer le repérage sur site.
+      </p>
+    </div>
+    <div>
+      <div class="label" style="color:rgba(255,255,255,0.6);margin-bottom:14px;">Ce qui se déclenche à la validation</div>
+      <ul class="bullet-list dark" style="margin-top:0;">
+        <li><strong style="color:rgba(255,255,255,0.7);">Vous choisissez le niveau</strong> : Essentiel, Évolution, Intensif ou Pack Rythme</li>
+        <li><strong style="color:rgba(255,255,255,0.7);">Signature et acompte</strong> déclenchent le repérage sur site au 17 rue Saint-Martin</li>
+        <li><strong style="color:rgba(255,255,255,0.7);">Vos premières vidéos sont prêtes sous 10 à 15 jours ouvrés</strong></li>
+      </ul>
+      <div style="margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,0.14);">
+        <p class="cta-contact">JMStudio : Production vidéo &amp; motion design<br>06 89 30 84 23 · jmstudiovisuals@gmail.com<br>jmstudio.online · Nantes — déplacement à Angers inclus</p>
+      </div>
+    </div>
+  </div>
+  <div class="cta-right">
+    <img src="images/chou-facade.jpg" alt="Chou signature devant la façade angevine" style="width:100%;height:100%;object-fit:cover;object-position:center 75%;">
+    <div class="cta-overlay">
+      <div class="arrow-circle">→</div>
+      <div style="font-family:'Playfair Display',serif;font-weight:900;font-size:14px;color:#fff;letter-spacing:0.06em;">CONTACTEZ-NOUS</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>JMStudio · Proposition de collaboration vidéo · Le Chou Angers · 2026</span>
+  <span>Production vidéo &amp; motion design • Nantes, Pays de la Loire</span>
+</footer>
+
+</body>
+</html>
