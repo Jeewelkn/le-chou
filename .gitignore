@@ -12,3 +12,7 @@ propale/images/packaging.jpg
 propale/images/porte.jpg
 propale/images/salle.jpg
 propale/images/vitrine.jpg
+*.bak
+Capture d*cran*
+TODO_*
+PROMPT_*
